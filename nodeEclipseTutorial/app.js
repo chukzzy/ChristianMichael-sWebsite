@@ -6,7 +6,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
-  , https = require('https')
+  , http = require('http')
   , fs   = require('fs')
   , path = require('path');
 
@@ -48,6 +48,6 @@ app.get('/about', about.about);
 var resume = require('./routes/resume');
 app.get('/resume', resume.resume);
 
-https.createServer(config, app).listen(app.get('port'), function(){
+http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });

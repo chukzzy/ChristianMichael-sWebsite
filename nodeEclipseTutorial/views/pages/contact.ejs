@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<% include ../partials/header %>
+	
+	<body>
+		<% include ../partials/navbar %>
+		
+		<br><br><br>
+		
+		<div class="container">
+
+        	<div class="row">
+            	<div class="col-lg-12">
+
+            		<br><br>
+
+                	<h1 class="page-header">
+                        <span class='glyphicon glyphicon-phone'></span>
+
+                        &nbsp&nbsp
+
+                        <strong>
+                            <%= title %>
+                        </strong>
+                    </h1>
+
+                	<ol class="breadcrumb">
+                    	<li>
+                            <a href="index.html">
+                                <span class="glyphicon glyphicon-home glyphicon-white"></span>
+                                <font color="#828F90">
+                                    <strong>
+                                        &nbspHome
+                                    </strong>
+                                </font>
+                            </a>
+                    	</li>
+
+                    	<li class="active">Contact</li>
+
+                	</ol>
+            	</div>
+        	</div>
+        	
+        	
+        	<div class="row">
+            	<div class="col-md-8">
+                	<!-- Embedded Google Map -->
+                	<iframe width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed"></iframe>
+            	</div>
+            	
+            	<div class="col-md-4">
+                	<h3>
+                        <strong>
+                            Contact Details
+                        </strong>
+                    </h3>
+
+                	<p>
+                        <font color="#768586">
+                    	   29 Skyview Pvt<br>Ottawa, ON K2G 6W6<br>
+                	   </font>
+                    </p>
+
+                	<p>
+                        <span class="glyphicon glyphicon-phone-alt"> 
+                    	<abbr title="Phone">
+                            <font color="#768586">
+                                Phone
+                            </font>
+                        </abbr>
+
+                        : (613) 581-7788
+
+                    </p>
+
+                	<p>
+                        <span class="glyphicon glyphicon-envelope">
+                    	<abbr title="Email">
+                            <font color="#768586">
+                                Email
+                            </font>
+                        </abbr>
+
+                        : <a href="mailto:chukwudiimichael@yahoo.ca">chukwudiimichael@yahoo.ca</a>
+
+                	</p>
+            	</div>
+        	</div>
+        	
+        	
+        	<br><br>
+        	<hr>
+
+			<h2 align="center">
+                <span class='glyphicon glyphicon-star'></span> 
+            </h2>
+
+			<hr>
+
+			<br><br>
+			
+        	<div class="row">
+            	<div class="col-md-8">
+                	<form name="sentMessage" id="contactForm" novalidate>
+                    	<div class="control-group form-group">
+                        	<div class="controls">
+                            	<label>Full Name:</label>
+                            	<input type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name." name="name" placeholder="First and Last Name">
+                        	</div>   
+                  		</div>
+                  	
+                  	
+                    	<div class="control-group form-group">
+                        	<div class="controls">
+                            	<label>Phone Number:</label>
+                            	<input type="tel" class="form-control" id="phone" name="contact" placeholder="Phone Number (Optional)">
+                        	</div>
+                    	</div>
+                    
+                    
+                    	<div class="control-group form-group">
+                        	<div class="controls">
+                            	<label>Email Address:</label>
+                            	<input type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address." name="_replyto" placeholder="E-mail Address">
+                        	</div>
+                    	</div>
+                    
+                    
+                    	<div class="control-group form-group">
+                        	<div class="controls">
+                            	<label>Message:</label>
+                            	<textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none" name="message" placeholder="Message not more than 1000 words"></textarea>
+                        	</div>
+                    	</div>
+                    
+                    
+                    	<div id="success"></div>
+                    	
+                    	<button type="submit" class="btn btn-primary">
+                            <span class='glyphicon glyphicon-send'></span>
+
+                            &nbsp&nbspSend Message
+                            
+                        </button>
+                	</form>
+            	</div>
+
+        	</div>
+        
+        	
+        	<br>
+        	<br>
+        	<br>
+        
+        </div>
+        
+        <% include ../partials/footer %>
+	  	
+    	<script src="js/jqBootstrapValidation.js"></script> 
+    	<script src="js/contact_me.js"></script>
+    	<script src="js/scrolling-nav.js"></script>
+    	<script src="js/jquery.easing.min.js"></script>
+	        
+	</body>
+</html>

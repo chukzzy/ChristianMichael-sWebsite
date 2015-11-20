@@ -36,7 +36,7 @@ plan.local(function(local) {
   // local.exec('gulp build');
 
   local.log('Copy files to remote hosts');
-  var filesToCopy = local.exec('git ls-files', {silent: true});
+  var filesToCopy = local.exec('git ls-files', {exec: {maxBuffer: 10000*1024}}, {silent: true});
   // rsync files to all the destination's hosts
   local.transfer(filesToCopy, '/tmp/' + tmpDir);
 });

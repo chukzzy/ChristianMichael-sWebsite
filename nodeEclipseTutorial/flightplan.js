@@ -9,7 +9,7 @@ var tmpDir = appName+'-' + new Date().getTime();
 // configuration
 plan.target('staging', [
   {
-    host: '159.203.31.45',
+    host: '159.203.29.244',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   }
@@ -17,7 +17,7 @@ plan.target('staging', [
 
 plan.target('production', [
   {
-    host: '159.203.31.45',
+    host: '159.203.29.244',
     username: username,
     agent: process.env.SSH_AUTH_SOCK
   },
@@ -36,7 +36,7 @@ plan.local(function(local) {
   // local.exec('gulp build');
 
   local.log('Copy files to remote hosts');
-  var filesToCopy = local.exec('git ls-files',{exec: {maxBuffer: 10000*1024}}, {silent: true});
+  var filesToCopy = local.exec('git ls-files', {silent: true});
   // rsync files to all the destination's hosts
   local.transfer(filesToCopy, '/tmp/' + tmpDir);
 });

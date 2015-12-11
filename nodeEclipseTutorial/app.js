@@ -44,9 +44,12 @@ app.get('/contact', contact.contact);
 
 var about = require('./routes/about');
 app.get('/about', about.about);
-
+ 
 var resume = require('./routes/resume');
 app.get('/resume', resume.resume);
+
+var project = require('./routes/project');
+app.get('/project', project.project);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
